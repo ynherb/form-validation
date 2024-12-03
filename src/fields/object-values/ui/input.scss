@@ -1,0 +1,89 @@
+.base_input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+
+  & label {
+    width: 100%;
+  }
+  & label span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(87, 100, 111);
+  }
+
+  &__help {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 16px;
+    color: rgb(150, 150, 150);
+  }
+
+  & label span.require:after {
+    content: "*";
+    margin-left: 2px;
+    color: rgb(236, 41, 41);
+  }
+  &.error_input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    input {
+      border-color: red;
+    }
+  }
+  &__notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .error_msg {
+    color: red;
+    padding-top: 2px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .icon {
+    position: absolute;
+    left: 20px;
+    width: 24px;
+    display: flex;
+    @media(max-width: 1199px) {
+      width: 20px;
+    }
+    @media(max-width: 991px) {
+      width: 15px;
+    }
+  }
+  input {
+    border: 1px solid var(--bokun-border-color);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 2px;
+    padding: 18px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    background: #fff;
+    font-family: var(--bokun-font-primary);
+    @media(max-width: 1199px) {
+      padding: 9px 10px;
+    }
+    &:active,
+    &:focus {
+      border-color: rgb(29, 87, 199);
+    }
+    &.icon_true {
+      padding-left: 60px;
+      @media(max-width: 991px) {
+        padding-left: 50px;
+      }
+    }
+
+  }
+}

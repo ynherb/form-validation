@@ -1,0 +1,70 @@
+.object_switch {
+  flex: 1 1 0%;
+  font-family: var(--bokun-font-primary);
+
+  &__help {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 16px;
+    color: rgb(150, 150, 150);
+  }
+
+  &__toggle {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    & label {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    &__input {
+      position: relative;
+      display: inline-block;
+      border-radius: 24px;
+      appearance: none;
+      width: 32px;
+      min-width: 32px;
+      height: 16px!important;
+      margin: 0;
+
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgb(204, 204, 204);
+        border-radius: 34px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 2px;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      &__active {
+        &::after {
+          transform: translate3d(16px, 0px, 0px);
+        }
+
+        &::before {
+          background-color: rgb(29, 199, 36);
+        }
+      }
+    }
+  }
+}

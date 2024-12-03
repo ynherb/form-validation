@@ -1,0 +1,50 @@
+.object_boolean {
+
+  & label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &.require:after {
+        content: "*";
+        margin-left: 2px;
+        color: rgb(236, 41, 41);
+        margin-right: 5px;
+
+    }
+  }
+  &__help {
+    font-style: italic;
+    line-height: 16px;
+    color: rgb(150, 150, 150);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__content {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+
+    & button {
+      width: 62px;
+      height: 40px;
+      color: #888;
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+  &__error_msg {
+      color: red;
+      padding-top: 2px;
+      font-weight: 400;
+      font-size: 14px;
+  }
+}
